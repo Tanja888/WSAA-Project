@@ -4,6 +4,7 @@
 # API functionality CRUD in Restful
 from flask import Flask, request, jsonify
 import MySQLdb
+import json
 
 
 databaseDict = []
@@ -41,7 +42,7 @@ def get_movies():
         databaseDict.append({'id': id, 'title':name, 'year':year, 'director':director, 'rating': float(rating)}) #adds values in the dictionary
 
     db.close()
-    return databaseDict
+    return json.dumps(databaseDict)
 
 
 # adding a new movie to a database
