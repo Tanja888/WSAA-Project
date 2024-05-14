@@ -83,7 +83,7 @@ def delete(id):
     execute_query(cur, "DELETE FROM movies WHERE movie_id = {movie_id}".format(movie_id = id))
     db.commit()
     db.close()
-    return jsonify({"status": "Book deleted"}), 200
+    return jsonify({"status": "Movie deleted"}), 200
 
 
 if __name__ == "__main__":
