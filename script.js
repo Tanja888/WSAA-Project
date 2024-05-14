@@ -12,7 +12,7 @@ $(document).ready(function () {
         const movieId = $(this).data("id");
 
         $.ajax({
-            url: `http://127.0.0.1:5002/movies/${movieId}`,
+            url: `/movies/${movieId}`,
             type: "DELETE",
             success: function () {
                 loadMovies(); 
@@ -31,7 +31,7 @@ $(document).ready(function () {
         };
 
         $.ajax({
-            url: "http://127.0.0.1:5002/movies",
+            url: "/movies",
             type: "POST",
             contentType: "application/json",
             data: JSON.stringify(movie),
@@ -66,7 +66,7 @@ $(document).ready(function () {
         };
 
         $.ajax({
-            url: `http://127.0.0.1:5002/movies/${currentMovieId}`,
+            url: `/movies/${currentMovieId}`,
             type: "PUT",
             contentType: "application/json",
             data: JSON.stringify(movie),
@@ -81,7 +81,7 @@ $(document).ready(function () {
     //Load all movies
     function loadMovies(id = null) {
         $.ajax({
-            url: "http://127.0.0.1:5002/movies",
+            url: "/movies",
             type: "GET",
             data: {id : id},
             success: function (movies) {

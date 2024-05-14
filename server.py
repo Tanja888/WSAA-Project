@@ -13,10 +13,10 @@ CORS(app)
 
 
 def get_database_credentials():
-    return MySQLdb.connect(host="localhost",   
-                     user="root",               
-                     passwd="root",           
-                     db="moviesdb")            
+    return MySQLdb.connect(host="tanJa888.mysql.pythonanywhere-services.com",   
+                     user="tanJa888",               
+                     passwd="rootroot",           
+                     db="tanJa888$moviesdb")            
 
 
 def execute_query(cur, queryString): 
