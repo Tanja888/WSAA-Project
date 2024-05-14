@@ -3,13 +3,11 @@
 
 # API functionality CRUD in Restful
 from flask import Flask, request, jsonify
-from flask_cors import CORS
 import MySQLdb
 
 
 databaseDict = []
 app = Flask(__name__)
-CORS(app)
 
 
 def get_database_credentials():
