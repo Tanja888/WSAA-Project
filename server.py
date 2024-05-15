@@ -2,20 +2,11 @@
 # CRUD operation
 
 # API functionality CRUD in Restful
+from dbconfig import get_database_credentials
 from flask import Flask, request, jsonify
-import MySQLdb
-
 
 databaseDict = []
-app = Flask(__name__, static_url_path='', static_folder='.')
-
-
-def get_database_credentials():
-    return MySQLdb.connect(host="tanJa888.mysql.pythonanywhere-services.com",   
-                     user="tanJa888",               
-                     passwd="rootroot",           
-                     db="tanJa888$moviesdb")            
-
+app = Flask(__name__, static_url_path='', static_folder='.')       
 
 def execute_query(cur, queryString): 
     cur.execute(queryString)
